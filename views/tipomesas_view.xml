@@ -49,7 +49,7 @@
 
 		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
 		<record id="restaurante3_tipomesas_action" model="ir.actions.act_window">
-			<field name="name">Tipo Mesas</field>
+			<field name="name">TipoMesas</field>
 			<field name="res_model">restaurante3.tipomesas</field>
 			<field name="view_mode">tree,form</field>
 		</record>
