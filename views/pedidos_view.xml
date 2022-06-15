@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="pedidos_form">
+		<field name="name">restaurante3.pedidos.form</field>
+		<field name="model">restaurante3.pedidos</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de los pedidos">
+                    <field name="name" placeholder="ClavePedido" />
+                    <field name="fechapedido" placeholder="Fecha del Pedido"/>
+					<field name="folio" placeholder="Folio" />
+                    <field name="orden" placeholder="Orden del cliente"/>
+					<field name="descripcion" placeholder="Descripcion" />
+					<field name="empleados" placeholder="Empleado" />
+                    <field name="cliente" placeholder="Cliente"/>
+                    <field name="tipomesas" placeholder="Mesa"/>
+                    
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="restaurante3_pedidos_tree">
+			<field name="name">restaurante3.pedidos.tree</field>
+			<field name="model">restaurante3.pedidos</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Pedidos" >
+						<field name="name"/>
+						<field name="fechapedido"/>
+						<field name="folio"/>
+						<field name="orden"/>
+						<field name="descripcion"/>
+						<field name="empleados"/>
+						<field name="cliente"/>
+						<field name="tipomesas"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="restaurante3_pedidos_search">
+			<field name="name">restaurante3.pedidos.search</field>
+			<field name="model">restaurante3.pedidos</field>
+			<field name="arch" type="xml">
+				<search>
+					    <field name="name"/>
+						<field name="fechapedido"/>
+						<field name="folio"/>
+						<field name="orden"/>
+						<field name="descripcion"/>
+						<field name="empleados"/>
+						<field name="cliente"/>
+						<field name="tipomesas"/>
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
+		<record id="restaurante3_pedidos_action" model="ir.actions.act_window">
+			<field name="name">pedidos</field>
+			<field name="res_model">restaurante3.pedidos</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+        
+	
+
+</odoo>

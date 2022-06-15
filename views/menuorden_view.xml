@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="menuorden_form">
+		<field name="name">restaurante3.menuorden.form</field>
+		<field name="model">restaurante3.menuorden</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de la orden">
+                    <field name="name" placeholder="Menu" />
+                    <field name="platillo" placeholder="Nombre de platillo"/>
+					<field name="precio" placeholder="Precio"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="restaurante3_menuorden_tree">
+			<field name="name">restaurante3.menuorden.tree</field>
+			<field name="model">restaurante3.menuorden</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Orden" >
+						<field name="name" />
+						<field name="platillo" />
+						<field name="precio"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="restaurante3_menuorden_search">
+			<field name="name">restaurante3.menuorden.search</field>
+			<field name="model">restaurante3.menuorden</field>
+			<field name="arch" type="xml">
+				<search>
+					    <field name="name" />
+						<field name="platillo" />
+						<field name="precio"/>
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
+		<record id="restaurante3_menuorden_action" model="ir.actions.act_window">
+			<field name="name">Menu</field>
+			<field name="res_model">restaurante3.menuorden</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+	
+
+</odoo>

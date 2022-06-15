@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Custom report. -->
+<odoo>
+	<template id="ticket">
+		<t t-call="web.html_container">
+			<div class="header"  style="font-size:10px">
+				<strong>Apatzingan,Mich.</strong>
+			</div>
+
+			<div class="page" style="font-size:10px">
+					<t t-foreach="docs" t-as="o">
+						<table width="100%" style="border: 1px black solid">
+							
+									<tr>
+										<td width="10%">RESTAURANTE JULIO GOD Y ASOCIADOS</td>
+									</tr>
+									<tr>
+										<td width="10%">sucursal TEC</td>
+									</tr>
+									<tr>
+										<td width="10%">tel:453 156 9008</td>
+									</tr>
+
+								<table width="100%" style="border: 1px black solid">
+									<tr>
+										<td width="10%">MESA: </td>
+										<td width="10%"> <t t-esc="o.tipomesas.name" /> </td>
+									</tr>
+									<tr>
+										<td width="10%">EMPLEADO: </td>
+										<td width="10%"><t t-esc="o.empleados.name" /></td>
+									</tr>
+									<tr>
+										<td width="50%">Folio: </td>
+										<td width="50%"><t t-esc="o.folio" /></td>
+									</tr>
+									<tr>
+										<td width="50%">Fecha: </td>
+										<td width="50%"><t t-esc="o.fecha" /></td>
+									</tr>
+								</table>
+									
+							<table width="100%" style="border: 1px black solid">
+							<tr>
+								<td width="10%">Cantidad</td>
+								<td width="10%">Descripcion</td>
+								<td width="10%">Importe</td>
+							</tr>
+							<tr>
+								<td width="50%"> <t t-esc="o.cantidad" /> </td>
+								<td width="50%"><t t-esc="o.descripcion" /></td>
+								<td width="50%"><t t-esc="o.importe" /></td>
+							</tr>
+							</table>
+							<table width="100%" style="border: 1px black solid">
+							<tr>
+								<td width="10%">Total: </td>
+							</tr>
+							</table>
+						</table>	
+						
+					</t>
+			</div>
+			<div class="footer"  style="font-size:9px">
+				<strong>sistemaTicket V1.0</strong>
+			</div>
+		</t>
+		</template>
+</odoo>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="clientes_form">
+		<field name="name">restaurante3.clientes.form</field>
+		<field name="model">restaurante3.clientes</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos del cliente">
+                    <field name="name" placeholder="Nombre y Apellidos" />
+                    <field name="numcliente" placeholder="Número de Cliente"/>
+                    <field name="direccion" placeholder="Dirección"/>
+                    <field name="telefono" placeholder="Teléfono"/>							
+                    <field name="sexo" placeholder="Sexo"/>
+                    <field name="edad" placeholder="Edad"/>
+					<field name="email" placeholder="E-mail"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="restaurante3_clientes_tree">
+			<field name="name">restaurante3.clientes.tree</field>
+			<field name="model">restaurante3.clientes</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Clientes" >
+						<field name="name" />
+						<field name="numcliente" />
+						<field name="direccion"/>
+						<field name="telefono" />
+						<field name="sexo" />
+						<field name="edad" />
+						<field name="email" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="restaurante3_clientes_search">
+			<field name="name">restaurante3.clientes.search</field>
+			<field name="model">restaurante3.clientes</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+						<field name="numcliente" />
+						<field name="direccion"/>
+						<field name="telefono" />
+						<field name="sexo" />
+						<field name="edad" />
+						<field name="email" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
+		<record id="restaurante3_clientes_action" model="ir.actions.act_window">
+			<field name="name">clientes</field>
+			<field name="res_model">restaurante3.clientes</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+	<report id="ticket_id" model="restaurante3.clientes"
+		string="ticket" report_type="qweb-pdf" name="restaurante3.ticket"
+		attachment_use="False"/> 
+
+</odoo>

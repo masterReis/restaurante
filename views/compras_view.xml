@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="compras_form">
+		<field name="name">restaurante3.compras.form</field>
+		<field name="model">restaurante3.compras</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos de compra">
+                    <field name="name" placeholder="Número de compra" />
+                    <field name="fecha" placeholder="Fecha de compra" />
+                    <field name="producto" placeholder="Nombre del Producto"/>
+                    <field name="cantidad" placeholder="Cantidad"/>
+                    <field name="descripcion" placeholder="Descripcion" />
+					<field name="precio" placeholder="Precio"/>
+					<field name="importe" placeholder="Importe"/>
+                    <field name="proveedor" placeholder="Proveedor"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="restaurante3_compras_tree">
+			<field name="name">restaurante3.compras.tree</field>
+			<field name="model">restaurante3.compras</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Compras" >
+						<field name="name" />
+                        <field name="fecha"/>
+						<field name="producto" />
+						<field name="cantidad"/>
+                        <field name="descripcion"/>
+						<field name="precio"/>
+						<field name="importe"/>
+						<field name="proveedor" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="restaurante3_compras_search">
+			<field name="name">restaurante3.compras.search</field>
+			<field name="model">restaurante3.compras</field>
+			<field name="arch" type="xml">
+				<search>
+					    <field name="name" />
+                        <field name="fecha"/>
+						<field name="producto" />
+						<field name="cantidad"/>
+                        <field name="descripcion"/>
+						<field name="precio"/>
+						<field name="importe"/>
+						<field name="proveedor" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
+		<record id="restaurante3_compras_action" model="ir.actions.act_window">
+			<field name="name">compras</field>
+			<field name="res_model">restaurante3.compras</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+        <report id="ticket_id" model="restaurante3.compras"
+		string="ticket" report_type="qweb-pdf" name="restaurante3.ticket"
+		attachment_use="False"/> 
+	
+
+</odoo>

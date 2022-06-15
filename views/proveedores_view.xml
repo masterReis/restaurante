@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="proveedores_form">
+		<field name="name">restaurante3.proveedores.form</field>
+		<field name="model">restaurante3.proveedores</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos del Proveedor">
+                    <field name="name" placeholder="Número de Proveedor" />
+                    <field name="nombre" placeholder="Nombre y Apellidos"/>
+                    <field name="direccion" placeholder="Dirección"/>
+                    <field name="telefono" placeholder="Teléfono"/>							
+                    <field name="sexo" placeholder="Sexo"/>
+                    <field name="edad" placeholder="Edad"/>
+					<field name="email" placeholder="E-mail"/>
+					<field name="serviciooproducto" placeholder="Servicio Y/O Producto que brinde el proveedor"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="restaurante3_proveedores_tree">
+			<field name="name">restaurante3.proveedores.tree</field>
+			<field name="model">restaurante3.proveedores</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Proveedores" >
+						<field name="name" />
+						<field name="nombre" />
+						<field name="direccion"/>
+						<field name="telefono" />
+						<field name="sexo" />
+						<field name="edad" />
+						<field name="email" />
+						<field name="serviciooproducto" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="restaurante3_proveedores_search">
+			<field name="name">restaurante3.proveedores.search</field>
+			<field name="model">restaurante3.proveedores</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+						<field name="nombre" />
+						<field name="direccion"/>
+						<field name="telefono" />
+						<field name="sexo" />
+						<field name="edad" />
+						<field name="email" />
+						<field name="serviciooproducto" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
+		<record id="restaurante3_proveedores_action" model="ir.actions.act_window">
+			<field name="name">proveedores</field>
+			<field name="res_model">restaurante3.proveedores</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+	
+
+</odoo>

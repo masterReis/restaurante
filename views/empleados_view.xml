@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="empleados_form">
+		<field name="name">restaurante3.empleados.form</field>
+		<field name="model">restaurante3.empleados</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos del empleado">
+                    <field name="name" placeholder="Nombre y Apellidos" />
+                    <field name="numempleado" placeholder="Numero de Empleado"/>
+                    <field name="direccion" placeholder="Dirección"/>
+                    <field name="telefono" placeholder="Teléfono"/>							
+                    <field name="sexo" placeholder="Sexo"/>
+                    <field name="edad" placeholder="Edad"/>
+					<field name="email" placeholder="E-mail"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="restaurante3_empleados_tree">
+			<field name="name">restaurante3.empleados.tree</field>
+			<field name="model">restaurante3.empleados</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Empleados" >
+						<field name="name" />
+						<field name="numempleado" />
+						<field name="direccion"/>
+						<field name="telefono" />
+						<field name="sexo" />
+						<field name="edad" />
+						<field name="email" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="restaurante3_empleados_search">
+			<field name="name">restaurante3.empleados.search</field>
+			<field name="model">restaurante3.empleados</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="name" />
+						<field name="numempleado" />
+						<field name="direccion"/>
+						<field name="telefono" />
+						<field name="sexo" />
+						<field name="edad" />
+						<field name="email" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
+		<record id="restaurante3_empleados_action" model="ir.actions.act_window">
+			<field name="name">empleados</field>
+			<field name="res_model">restaurante3.empleados</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+	
+
+</odoo>

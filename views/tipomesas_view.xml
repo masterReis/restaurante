@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="tipomesas_form">
+		<field name="name">restaurante3.tipomesas.form</field>
+		<field name="model">restaurante3.tipomesas</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos Tipomesas">
+                    <field name="name" placeholder="NumeroMesa" />
+					<field name="descripcion" placeholder="Descripcion"/>
+                    <field name="clavemesa" placeholder="ClaveMesa" />
+                    
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="restaurante3_tipomesas_tree">
+			<field name="name">restaurante3.tipomesas.tree</field>
+			<field name="model">restaurante3.tipomesas</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Tipomesas" >
+						<field name="name"/>
+						<field name="descripcion"/>
+                        <field name="clavemesa"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="restaurante3_tipomesas_search">
+			<field name="name">restaurante3.tipomesas.search</field>
+			<field name="model">restaurante3.tipomesas</field>
+			<field name="arch" type="xml">
+				<search>
+					   <field name="name"/>
+					   <field name="descripcion"/>
+                        <field name="clavemesa"/>
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
+		<record id="restaurante3_tipomesas_action" model="ir.actions.act_window">
+			<field name="name">Tipo Mesas</field>
+			<field name="res_model">restaurante3.tipomesas</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+        
+	
+
+</odoo>

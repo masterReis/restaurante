@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="productos_form">
+		<field name="name">restaurante3.productos.form</field>
+		<field name="model">restaurante3.productos</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos del Producto">
+                    <field name="name" placeholder="Número de Producto" />
+                    <field name="producto" placeholder="Nombre del Producto"/>
+                    <field name="cantidad" placeholder="Cantidad"/>
+					<field name="precio" placeholder="Precio"/>
+                    <field name="proveedor" placeholder="Proveedor"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="restaurante3_productos_tree">
+			<field name="name">restaurante3.productos.tree</field>
+			<field name="model">restaurante3.productos</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Productos" >
+						<field name="name" />
+						<field name="producto" />
+						<field name="cantidad"/>
+						<field name="precio"/>
+						<field name="proveedor" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="restaurante3_productos_search">
+			<field name="name">restaurante3.productos.search</field>
+			<field name="model">restaurante3.productos</field>
+			<field name="arch" type="xml">
+				<search>
+					    <field name="name" />
+						<field name="producto" />
+						<field name="cantidad"/>
+						<field name="precio"/>
+						<field name="proveedor" />
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
+		<record id="restaurante3_productos_action" model="ir.actions.act_window">
+			<field name="name">productos</field>
+			<field name="res_model">restaurante3.productos</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+	
+
+</odoo>

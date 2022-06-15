@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem name="Restaurante3" id="restaurante3_menu" sequence="20" />
+		
+		<menuitem name="Catalagos" id="restaurante3_catalogos_menu" parent="restaurante3_menu" sequence="10"/>
+			<menuitem name="Clientes" action="restaurante3_clientes_action"  id="restaurante3_clientes_menu" sequence="10" parent="restaurante3_catalogos_menu" />
+			<menuitem name="Empleados" action="restaurante3_empleados_action"  id="restaurante3_empleados_menu" sequence="20" parent="restaurante3_catalogos_menu" />
+			<menuitem name="Proveedores" action="restaurante3_proveedores_action"  id="restaurante3_proveedores_menu" sequence="30" parent="restaurante3_catalogos_menu" />
+			
+		<menuitem name="Procesos" id="restaurante3_procesos_menu" parent="restaurante3_menu" sequence="20"/>
+			<menuitem name="Compras" action="restaurante3_compras_action" id="restaurante3_compras_menu" sequence="10" parent="restaurante3_procesos_menu" />
+			<menuitem name="Productos" action="restaurante3_productos_action" id="restaurante3_productos_menu" sequence="10" parent="restaurante3_procesos_menu" />
+			
+		<menuitem name="Internos" id="restaurante3_internos_menu" parent="restaurante3_menu" sequence="30"/>
+			<menuitem name="DetallePedidos" action="restaurante3_detallepedidos_action"  id="restaurante3_detallepedidos_menu" sequence="10" parent="restaurante3_internos_menu" />
+			<menuitem name="Pedidos" action="restaurante3_pedidos_action"  id="restaurante3_pedidos_menu" sequence="10" parent="restaurante3_internos_menu" />
+			
+		<menuitem name="Inicio" id="restaurante3_inicio_menu" parent="restaurante3_menu" sequence="40"/>
+			<menuitem name="Menu" action="restaurante3_menuorden_action" id="restaurante3_menuorden_menu" sequence="10" parent="restaurante3_inicio_menu" />
+			<menuitem name="Tipomesas" action="restaurante3_tipomesas_action"  id="restaurante3_tipomesas_menu" sequence="10" parent="restaurante3_inicio_menu" />
+	</data>
+</odoo>

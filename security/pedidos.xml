@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="restaurante_id" model="ir.module.category">
+            <field name="name">Modulo Restaurante</field>
+        </record>
+        <record id="restaurante3_empleado" model="res.groups">
+            <field name="name">Empleados</field>
+            <field name="category_id" ref="restaurante_id"/>
+        </record>
+        <record id="restaurante3_cliente" model="res.groups">
+            <field name="name">Clientes</field>
+            <field name="category_id" ref="restaurante_id"/>
+        </record>
+        <record id="restaurante3_admin" model="res.groups">
+            <field name="name">Administrador</field>
+            <field name="category_id" ref="restaurante_id"/>
+        </record>
+    </data>
+</odoo>

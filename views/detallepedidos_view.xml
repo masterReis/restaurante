@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- vista tipo form del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="detallepedidos_form">
+		<field name="name">restaurante3.detallepedidos.form</field>
+		<field name="model">restaurante3.detallepedidos</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+		<form>
+            <sheet>
+                <group string="Datos DetallePedidos">
+                    <field name="name" placeholder="claveDetPed" />
+                    <field name="nameme" placeholder="ClavePedido" />
+                    <field name="fecha" placeholder="Fecha de compra" />
+                    <field name="folio" placeholder="Folio" />
+                    <field name="empleados" placeholder="Empleado" />
+                    <field name="tipomesas" placeholder="Numero de Mesa" />
+                    <field name="clientes" placeholder="Cliente" />
+                    <field name="orden" placeholder="Nombre del Producto"/>
+                    <field name="cantidad" placeholder="Cantidad por porcion"/>
+                    <field name="descripcion" placeholder="Descripcion" />
+                    <field name="importe" placeholder="Importe"/>
+                </group>
+            </sheet>
+		</form>
+        </field>
+		</record>
+
+        <!-- vista tipo tree del modelo escolares.alumnos -->	
+		<record model="ir.ui.view" id="restaurante3_detallepedidos_tree">
+			<field name="name">restaurante3.detallepedidos.tree</field>
+			<field name="model">restaurante3.detallepedidos</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="DetallePedidos" >
+						<field name="name" />
+                        <field name="nameme" />
+                        <field name="fecha" />
+                        <field name="folio"/>
+                        <field name="empleados"/>
+                        <field name="tipomesas"/>
+                        <field name="clientes"  />
+                        <field name="orden" />
+                        <field name="cantidad" />
+                        <field name="descripcion" />
+                        <field name="importe"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="restaurante3_detallepedidos_search">
+			<field name="name">restaurante3.detallepedidos.search</field>
+			<field name="model">restaurante3.detallepedidos</field>
+			<field name="arch" type="xml">
+				<search>
+					   <field name="name" />
+                       <field name="nameme" />
+                        <field name="fecha" />
+                        <field name="folio"/>
+                        <field name="empleados"/>
+                        <field name="tipomesas"/>
+                        <field name="clientes"  />
+                        <field name="orden" />
+                        <field name="cantidad" />
+                        <field name="descripcion" />
+                        <field name="importe"/>
+				</search>
+			</field>
+		</record>
+
+
+
+		<!-- ACCION PARA EL MODELO escolares.alumnos -->	
+		<record id="restaurante3_detallepedidos_action" model="ir.actions.act_window">
+			<field name="name">detallepedidos</field>
+			<field name="res_model">restaurante3.detallepedidos</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+        <report id="ticket_id" model="restaurante3.detallepedidos"
+		string="ticket" report_type="qweb-pdf" name="restaurante3.ticket"
+		attachment_use="False"/> 
+	
+
+</odoo>
