@@ -18,8 +18,8 @@
         'views/compras_view.xml',
         'views/detallepedidos_view.xml',
         'reports/ticket.xml',
-        'views/menu_view.xml',
         'views/tipomesas_view.xml',
+        'views/menu_view.xml',
         'security/pedidos.xml',
         'security/ir.model.access.csv',
         

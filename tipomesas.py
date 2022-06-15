@@ -9,5 +9,5 @@ class tipomesas(models.Model):
     clavemesa = fields.Char(string='ClaveMesa')
     
     _sql_constraints = [
-        ('unique_tipomesa', 'unique (namemesa)', 'ya existe!')
+        ('unique_tipomesa', 'unique (name)', 'ya existe!')
     ]
