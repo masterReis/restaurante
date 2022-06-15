@@ -18,6 +18,6 @@
 			
 		<menuitem name="Inicio" id="restaurante3_inicio_menu" parent="restaurante3_menu" sequence="40"/>
 			<menuitem name="Menu" action="restaurante3_menuorden_action" id="restaurante3_menuorden_menu" sequence="10" parent="restaurante3_inicio_menu" />
-			<menuitem name="Tipomesas" action="restaurante3_tipomesas_action"  id="restaurante3_tipomesas_menu" sequence="10" parent="restaurante3_inicio_menu" />
+			<menuitem name="TipoMesas" action="restaurante3_tipomesas_action"  id="restaurante3_tipomesas_menu" sequence="10" parent="restaurante3_inicio_menu" />
 	</data>
 </odoo>
